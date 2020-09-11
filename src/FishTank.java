@@ -13,6 +13,11 @@ public class FishTank {
         aFish.color = "красную";
         aFish.weight = 2;
         fishTank.add(aFish);
+
+        Fish aFish1 = new Fish(1110, 211, "yellow");
+        aFish1.color = "grey";
+        aFish1.weight = 112;
+
         aFish = new Fish(100, 42, "Wite");
         aFish.color = "purple";
         aFish.weight = 12;
@@ -22,15 +27,16 @@ public class FishTank {
         aFish = new Fish("Blue");
         aFish.color = "зеленую";
         aFish.weight = 5;
-        fishTank.add(aFish);
+        fishTank.add(0,aFish1);
 
         int fishCount = fishTank.size();
         for (int i = 0; i < fishCount; i++) {
-            theFish = fishTank.get(i);
+            theFish =  (Fish) fishTank.get(i);
             System.out.println("Поймал " + theFish.color + " рыбу с весом " + theFish.weight + " кг. Глубина:" + theFish.currentDepth);
 
 
-//            System.out.println(fishTank.get(2));
+//           System.out.println(fishTank.get(0));
+           System.out.println(fishTank.indexOf(aFish1));
 
 
         }
